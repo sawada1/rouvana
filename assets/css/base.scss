@@ -1,17 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-$mainColor: green;
+// start colors
 
+$mainColor: #fd7037;
+$color2: #f7d3c5;
+$color3: #f1d2d2;
+$grey1: #8c8c8c;
+$grey2: #cec8c8;
+$grey3: #423d3d;
+$blue1: #0f2057;
+$blue2: #3759b1;
+$red1: #e33629;
+$yellow1: #ffde02;
+$green1: #38c543;
+$background: #f3f0f0;
+$secondary-black: #2d3a4a;
 
-html,body{
-
+// end colors
+html,
+body {
+    overflow-x: clip !important;
 }
-body{
-
+body {
+    background-color: $background;
+    font-family: "Roboto", sans-serif;
+}
+body.modal-open {
+    padding: 0px;
 }
 
+// Check if body has .specific-class
 
+html {
+    &.modal-open {
+        overflow: hidden !important;
+    }
+}
+
+a,
+ul,
+li {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+button {
+    &.fill {
+        background-color: $mainColor;
+        color: #fff;
+    }
+    &.stroke {
+        background-color: #fff;
+        border: 1px solid $secondary-black;
+        color: $secondary-black;
+    }
+}
