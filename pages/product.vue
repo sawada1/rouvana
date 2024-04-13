@@ -380,7 +380,80 @@
                   <div class="price">
                     <span class="disc"> AED 65.00 </span>
                     <h5> AED 60.00 </h5>
-                    <span class="save"> Save 500 </span>
+                    <v-dialog transition="dialog-top-transition" width="auto">
+                      <template v-slot:activator="{ props: activatorProps }">
+                        <button class="save" style="font-size: 11px;" v-bind="activatorProps"> Save 500 </button>
+                      </template>
+                      <template v-slot:default="{ isActive }">
+                        <div class="more-info-container">
+                          <div class="main">
+                            <div class="head">
+                              <h3> Your Price Quote Details </h3>
+                            </div>
+                            <div class="body">
+
+
+                              <div class="item ">
+                                <div class="d-flex align-items-cente gap-2">
+                                  <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="3" viewBox="0 0 10 3"
+                                      fill="none">
+                                      <path d="M0.666992 1.5H9.61144" stroke="white" stroke-width="2.55556" />
+                                    </svg>
+                                  </div>
+                                  <div class="d-flex flex-column mt-1 w-100 align-items-cente">
+                                    <h6> Your Price Quote Details</h6>
+                                    <div class="main-item w-100">
+                                      <div class="table-container">
+                                        <div class="headerr">
+                                          Your Guarantee lowest price for this option is based on the following:
+                                        </div>
+                                        <table class="table table-borderless">
+                                          <thead>
+                                            <tr>
+                                              <th> Tour Option </th>
+                                              <th> Transfer Option </th>
+                                              <th> Adult </th>
+                                              <th> PriceChild </th>
+                                              <th> PriceTotal </th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td> Qasr Al Watan - Palace and Garden (Admission Only) </td>
+                                              <td> Without Transfers</td>
+                                              <td> AED 60.00 X 1 </td>
+                                              <td> AED 30.00 X 0 </td>
+                                              <td> AED 60.00 </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="price-table">
+                                <h4> Your total cost: AED 60.00 </h4>
+                              </div>
+
+                            </div>
+                          </div>
+                          <!-- <v-btn text="Close" @click="isActive.value = false"></v-btn> -->
+                          <svg class="close" @click="isActive.value = false" xmlns="http://www.w3.org/2000/svg"
+                            width="56" height="51" viewBox="0 0 56 51" fill="none">
+                            <ellipse cx="29.9554" cy="25.5" rx="25.9554" ry="25.5" fill="#FD7037" />
+                            <path
+                              d="M21.1745 36.7451L19 34.5706L27.698 25.8725L19 17.1745L21.1745 15L29.8725 23.698L38.5706 15L40.7451 17.1745L32.047 25.8725L40.7451 34.5706L38.5706 36.7451L29.8725 28.047L21.1745 36.7451Z"
+                              fill="#F4F3F3" />
+                          </svg>
+
+                        </div>
+                      </template>
+                    </v-dialog>
                     <span class="earn"> Earn 1500 R Points </span>
                   </div>
                 </td>

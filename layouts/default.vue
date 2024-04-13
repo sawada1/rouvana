@@ -8,14 +8,21 @@
                             <img class="" src="~/assets/images/logo.png" alt="" />
                         </nuxt-link>
                     </div>
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    <!-- <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="sr-only"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>
+                    </button> -->
+                    <v-badge class="mobile-badge" :content="2" color="#fd7037">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 45 44" fill="none">
+                            <path
+                                d="M35.57 35.1742C33.1543 35.1742 31.2174 37.1111 31.2174 39.5269C31.2174 40.6813 31.6759 41.7884 32.4922 42.6047C33.3085 43.421 34.4156 43.8795 35.57 43.8795C36.7244 43.8795 37.8316 43.421 38.6479 42.6047C39.4641 41.7884 39.9227 40.6813 39.9227 39.5269C39.9227 38.3725 39.4641 37.2653 38.6479 36.449C37.8316 35.6328 36.7244 35.1742 35.57 35.1742ZM0.748535 0.352661V4.70535H5.10122L12.9361 21.2238L9.97623 26.5558C9.64978 27.1652 9.45391 27.8834 9.45391 28.6451C9.45391 29.7995 9.9125 30.9067 10.7288 31.723C11.5451 32.5392 12.6522 32.9978 13.8066 32.9978H39.9227V28.6451H14.7207C14.5764 28.6451 14.438 28.5878 14.3359 28.4858C14.2339 28.3837 14.1766 28.2454 14.1766 28.1011C14.1766 27.9922 14.1983 27.9052 14.2419 27.8399L16.2006 24.2924H32.4143C34.0466 24.2924 35.483 23.3784 36.2229 22.0508L44.0143 7.96987C44.1666 7.62165 44.2754 7.25167 44.2754 6.88169C44.2754 6.30449 44.0461 5.75093 43.638 5.34279C43.2298 4.93464 42.6763 4.70535 42.0991 4.70535H9.91094L7.86518 0.352661M13.8066 35.1742C11.3909 35.1742 9.45391 37.1111 9.45391 39.5269C9.45391 40.6813 9.9125 41.7884 10.7288 42.6047C11.5451 43.421 12.6522 43.8795 13.8066 43.8795C14.961 43.8795 16.0681 43.421 16.8844 42.6047C17.7007 41.7884 18.1593 40.6813 18.1593 39.5269C18.1593 38.3725 17.7007 37.2653 16.8844 36.449C16.0681 35.6328 14.961 35.1742 13.8066 35.1742Z"
+                                fill="black" />
+                        </svg>
+                    </v-badge>
                     <div class="collapse  navbar-collapse" id="navbarNav">
                         <!-- <div class="links navbar-nav justify-content-center w-100">
                             <nuxt-link class="nav-link" :to="localePath('/')">{{ $t("home") }}</nuxt-link>
@@ -216,115 +223,7 @@
 
 
 
-        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="auth-container">
-
-                        <div class=" login">
-                            <div class="head">
-                                <button @click="loginBtn1 = 1" :class="{ 'active': loginBtn1 == 1 }"> login now
-                                </button>
-                                <button @click="loginBtn1 = 2" :class="{ 'active': loginBtn1 == 2 }"> my booking
-                                </button>
-                            </div>
-
-                            <div v-if="loginBtn1 == 1">
-                                <p>
-                                    Sign in to unlock a world of rewards - accumulate Rayna Tours Loyalty points or snag
-                                    exclusive
-                                    discounts on your booked travel experiences!
-
-                                </p>
-
-
-                                <div class="social-auth">
-                                    <div class="box">
-                                        <img src="../assets/images/devicon_google.svg" alt="">
-                                        <span> Sign in with google </span>
-                                    </div>
-                                    <div class="box">
-                                        <img src="../assets/images/logos_facebook.svg" alt="">
-                                        <span> Sign in with facebook </span>
-                                    </div>
-                                </div>
-
-                                <div class="line">
-                                    <span> Or sign in with email </span>
-                                </div>
-
-                                <div class="inputs">
-                                    <div class="inputs-container">
-                                        <div>
-                                            <input type="email" placeholder="Email address">
-
-                                        </div>
-                                        <div>
-                                            <input type="password" placeholder="Password">
-
-                                        </div>
-
-                                    </div>
-                                    <div class="forget-remember d-flex align-items-center justify-content-between">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <input id="rem1" type="checkbox">
-                                            <label for="rem1">remember me</label>
-                                        </div>
-                                        <span class="forget"> Forgot Password? </span>
-                                    </div>
-
-                                    <button> LOG IN </button>
-                                </div>
-
-                                <div class="line">
-
-                                </div>
-
-                                <div class="d-flex foot align-items-center justify-content-between w-100">
-                                    <span> No account yet? Sign up now ! </span>
-                                    <button> Sign Up </button>
-                                </div>
-
-                            </div>
-                            <div v-if="loginBtn1 == 2">
-                                <p>
-                                    View/ Print/Cancel Your Booking without Signing in
-                                </p>
-
-                                <div class="inputs">
-                                    <div class="inputs-container">
-                                        <div>
-                                            <input type="email" placeholder="Email address">
-
-                                        </div>
-                                        <div>
-                                            <input type="number" placeholder="Booking Reference Number">
-
-                                        </div>
-
-                                    </div>
-
-                                    <button> SUBMIT </button>
-                                </div>
-
-                            </div>
-
-
-                            <button class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path
-                                        d="M2.51172 24.001L0.124023 21.6133L9.67481 12.0625L0.124023 2.51172L2.51172 0.124023L12.0625 9.67481L21.6133 0.124023L24.001 2.51172L14.4502 12.0625L24.001 21.6133L21.6133 24.001L12.0625 14.4502L2.51172 24.001Z"
-                                        fill="#F4F3F3" />
-                                </svg>
-                            </button>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        <auth />
 
 
 
@@ -366,7 +265,223 @@
 
 
         <slot />
+        <div class="footer-mobile">
+            <div class="main-links">
+                <div class="link active d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-house"></i>
+                    <span> home </span>
+                </div>
+                <div @click="modal1 = true" class="link d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-book"></i>
+                    <span> services </span>
+                </div>
+                <div @click="modal2 = true" class="link d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-user"></i>
+                    <span> profile </span>
+                </div>
+            </div>
+            <div class="modal-mobile" :class="{'active': modal1}">
+                <div @click="modal1 = false" class="overlay"></div>
+                <div class="main">
+                    <h5 class="head"> services </h5>
+                    <div class="body">
+                        <div class="links">
+                            <div class="link">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                        fill="none">
+                                        <path
+                                            d="M10.102 2.33374C8.48173 2.33374 6.89783 2.81421 5.5506 3.7144C4.20337 4.61459 3.15334 5.89406 2.53328 7.39102C1.91322 8.88798 1.75098 10.5352 2.06709 12.1243C2.38319 13.7135 3.16344 15.1732 4.30916 16.319C5.45488 17.4647 6.91462 18.2449 8.50378 18.561C10.0929 18.8771 11.7402 18.7149 13.2371 18.0948C14.7341 17.4748 16.0135 16.4248 16.9137 15.0775C17.8139 13.7303 18.2944 12.1464 18.2944 10.5261C18.2921 8.35405 17.4282 6.27163 15.8924 4.73576C14.3565 3.19989 12.2741 2.33603 10.102 2.33374ZM17.034 10.5261C17.0347 11.4154 16.8635 12.2965 16.5299 13.1209L13.0087 10.9554C12.859 10.863 12.6916 10.8032 12.5172 10.7797L10.7196 10.5371C10.4719 10.5048 10.2202 10.5463 9.99598 10.6565C9.77178 10.7666 9.58507 10.9405 9.45924 11.1563H8.77235L8.47301 10.5371C8.39026 10.3647 8.26915 10.2135 8.11896 10.0952C7.96876 9.97679 7.79348 9.89435 7.60651 9.85417L6.97633 9.71789L7.59233 8.63555H8.90862C9.12162 8.63514 9.33106 8.58095 9.51754 8.47801L10.4825 7.9455C10.5673 7.89825 10.6465 7.84171 10.7188 7.77693L12.8386 5.8596C13.0511 5.66914 13.1924 5.41192 13.2391 5.13038C13.2857 4.84884 13.2351 4.5598 13.0954 4.31093L13.067 4.25973C14.2532 4.82217 15.2555 5.70946 15.9577 6.81863C16.6599 7.92779 17.0331 9.21335 17.034 10.5261ZM11.308 3.69966L11.9926 4.92536L9.8728 6.84269L8.90862 7.37519H7.59233C7.37078 7.37486 7.15305 7.43295 6.9611 7.54358C6.76914 7.65422 6.60974 7.8135 6.49897 8.00537L5.81128 9.20508L5.01174 7.07507L5.87351 5.03722C6.6363 4.44784 7.51379 4.02428 8.44976 3.79368C9.38573 3.56307 10.3595 3.53052 11.3088 3.69808L11.308 3.69966ZM3.17003 10.5261C3.16898 9.49577 3.39885 8.4783 3.84275 7.54849L4.73603 9.93294C4.81048 10.1304 4.93329 10.3059 5.09322 10.4436C5.25314 10.5812 5.44506 10.6765 5.65137 10.7207L7.33947 11.0838L7.6396 11.7077C7.74375 11.9199 7.90517 12.0987 8.10562 12.224C8.30606 12.3493 8.53755 12.416 8.77392 12.4166H8.89051L8.32098 13.6951C8.22063 13.9202 8.18849 14.1698 8.22853 14.413C8.26857 14.6562 8.37904 14.8823 8.54627 15.0634L8.5573 15.0744L10.102 16.6656L9.94921 17.4534C8.13888 17.4112 6.4167 16.6633 5.15016 15.3691C3.88362 14.0749 3.17304 12.3369 3.17003 10.5261ZM11.2505 17.362L11.3395 16.9043C11.3761 16.7099 11.3667 16.5096 11.312 16.3194C11.2573 16.1293 11.1588 15.9546 11.0245 15.8094C11.0206 15.8059 11.0169 15.8022 11.0134 15.7984L9.47185 14.2079L10.551 11.7865L12.3486 12.0291L15.9501 14.2442C15.4283 15.0636 14.7405 15.7645 13.931 16.3015C13.1215 16.8385 12.2083 17.1998 11.2505 17.362Z"
+                                            fill="#000" />
+                                    </svg>
+                                </div>
+                                <span> activites </span>
+                            </div>
+                            <div class="link">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                        fill="none">
+                                        <path
+                                            d="M7.04837 2.96387L5.78801 4.22423L7.04837 5.48459L8.30873 4.22423L7.04837 2.96387ZM8.30873 4.22423L9.56909 5.48459L10.8295 4.22423L9.56909 2.96387L8.30873 4.22423ZM10.8295 4.22423L12.0898 5.48459L13.3502 4.22423L12.0898 2.96387L10.8295 4.22423ZM13.3502 4.22423L14.6105 5.48459L15.8709 4.22423L14.6105 2.96387L13.3502 4.22423ZM14.6105 5.48459H3.89746V18.0882H17.7615V5.48459H14.6105ZM5.15782 6.74496H16.5011V16.8279H12.72V13.677H8.93891V16.8279H5.15782V6.74496ZM6.41819 8.00532V9.26568H7.67855V8.00532H6.41819ZM8.93891 8.00532V9.26568H10.1993V8.00532H8.93891ZM11.4596 8.00532V9.26568H12.72V8.00532H11.4596ZM13.9804 8.00532V9.26568H15.2407V8.00532H13.9804ZM6.41819 9.89586V11.1562H7.67855V9.89586H6.41819ZM8.93891 9.89586V11.1562H10.1993V9.89586H8.93891ZM11.4596 9.89586V11.1562H12.72V9.89586H11.4596ZM13.9804 9.89586V11.1562H15.2407V9.89586H13.9804ZM6.41819 11.7864V13.0468H7.67855V11.7864H6.41819ZM8.93891 11.7864V13.0468H10.1993V11.7864H8.93891ZM11.4596 11.7864V13.0468H12.72V11.7864H11.4596ZM13.9804 11.7864V13.0468H15.2407V11.7864H13.9804ZM6.41819 13.677V14.9373H7.67855V13.677H6.41819ZM13.9804 13.677V14.9373H15.2407V13.677H13.9804ZM10.1993 14.9373H11.4596V16.8279H10.1993V14.9373Z"
+                                            fill="black" />
+                                    </svg>
+                                </div>
+                                <span> hotels </span>
+                            </div>
+                            <div class="link">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="21" viewBox="0 0 31 21"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_0_203)">
+                                            <path
+                                                d="M17.7153 15.7589H19.4723V17.5159H17.7153V15.7589ZM23.7886 15.7589H25.5455V17.5159H23.7886V15.7589ZM22.3148 9.52771V7.77161H19.8798V8.62697L20.7881 9.52855L22.3148 9.52771Z"
+                                                fill="black" />
+                                            <path
+                                                d="M28.3375 19.0229V15.3183H28.8963L29.4156 14.8049L23.2633 8.65266H22.4995V9.71893H20.7098L19.6435 8.65266H16.6893L10.5437 14.7982L11.063 15.3175H11.8856V19.0221H10.2799C7.87848 16.7249 7.2399 11.5145 7.46424 7.63849L7.50373 7.55951H7.52306C8.57336 7.55951 9.50435 8.0687 10.0841 8.85348L10.09 8.86188C10.5269 9.45257 10.7899 10.1962 10.7899 11.0003C10.7899 11.5549 10.6656 12.08 10.4421 12.5497L10.4513 12.5279C10.9202 12.4078 11.3561 12.1838 11.7268 11.8725L11.7217 11.8767C12.1077 11.5408 12.417 11.1259 12.6287 10.6601C12.8405 10.1944 12.9499 9.68861 12.9493 9.17697C12.9493 8.37454 12.6855 7.63429 12.2402 7.03772L12.2469 7.04696C11.8648 6.51412 11.3244 6.11532 10.7026 5.9073C10.0808 5.69927 9.40923 5.69262 8.78342 5.88827L8.80527 5.88239C9.02793 5.74375 9.28421 5.62107 9.55392 5.5278L9.58081 5.5194C9.94739 5.384 10.3353 5.31542 10.7261 5.3169C11.636 5.3169 12.4603 5.68073 13.0628 6.26974L13.0619 6.2689C13.1512 5.79762 13.1244 5.31168 12.9838 4.85309L12.9897 4.8741C12.8503 4.46542 12.6293 4.08938 12.34 3.76888C12.0506 3.44839 11.6991 3.19015 11.3067 3.00989C10.9144 2.82964 10.4894 2.73114 10.0578 2.7204C9.62616 2.70966 9.19685 2.7869 8.79603 2.94742L8.81703 2.93986C8.61428 3.00975 8.41711 3.09485 8.22718 3.19445L8.25155 3.18269C8.19434 2.91991 8.10956 2.6639 7.99864 2.41891L8.00872 2.44328C7.26931 0.785479 5.5737 0.0023739 4.21839 0.687171C3.85238 0.874286 3.53789 1.14838 3.30252 1.4854L3.29748 1.4938C3.77449 1.54061 4.23398 1.69814 4.63936 1.95386C5.04474 2.20958 5.38482 2.55641 5.63251 2.96675L5.64008 2.98019C5.32566 2.82279 4.99289 2.70509 4.64943 2.62981L4.62086 2.62477C2.53706 2.17692 0.554094 3.30873 0.198671 5.1581C0.103704 5.66542 0.13516 6.18833 0.290258 6.68062L0.284376 6.65877C0.750337 6.12977 1.3534 5.73981 2.02701 5.53194C2.70061 5.32406 3.41856 5.30634 4.10159 5.48075L4.07471 5.47487C4.41837 5.54713 4.72253 5.65132 5.00737 5.78828L4.98301 5.77736C4.3013 5.68654 3.60801 5.80113 2.99178 6.10648C2.37555 6.41182 1.86442 6.89403 1.52373 7.49145L1.51449 7.50825C1.15879 8.10747 0.972083 8.79187 0.974214 9.4887C0.974214 10.8062 1.62708 11.9708 2.62781 12.6766L2.64041 12.685C3.07103 12.9741 3.56233 13.1604 4.07639 13.2295L4.09403 13.2311C3.72332 12.6169 3.5283 11.9127 3.53023 11.1952C3.53023 10.4617 3.72937 9.77439 4.07723 9.18538L4.06714 9.20386C4.32557 8.75403 4.6799 8.36664 5.10497 8.06923C5.53003 7.77182 6.01538 7.57168 6.52653 7.48305L6.54754 7.47969C5.35692 12.9018 5.02754 16.6795 6.00978 19.0212H3.14792V20.6009H30.16V19.0212H28.3375V19.0229ZM21.6576 15.404H27.6788V19.0229H21.6576V15.404ZM12.5317 14.6864L16.6909 10.5272L20.8501 14.6864V19.0229H16.2834V15.7594H13.9736V19.0229H12.5267V14.6864H12.5317Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_0_203">
+                                                <rect width="30.2487" height="20.1658" fill="white"
+                                                    transform="translate(0.144531 0.443848)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <span> holidays </span>
+                            </div>
+                            <div class="link">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M5.07956 5.77202C3.89314 5.11495 2.53951 4.5856 1.02539 4.21926L1.07496 3.92517H7.29864C8.13636 3.95542 8.81443 4.22346 9.04802 5.11999L10.4008 11.626V11.6268L10.8041 13.5888L14.5827 3.93357H18.6705L12.5947 18.0664L8.51111 18.0706L5.07956 5.77202Z"
+                                            fill="black" />
+                                    </svg>
+                                </div>
+                                <span> visa </span>
+                            </div>
+                            <div class="link">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_0_212)">
+                                            <path
+                                                d="M15.3631 7.9198H13.5269L10.7549 5.14783C10.6602 5.05233 10.5474 4.97661 10.4231 4.92508C10.2988 4.87355 10.1656 4.84723 10.031 4.84766H2.83648C2.66828 4.84797 2.50274 4.88971 2.3545 4.96919C2.20626 5.04867 2.07988 5.16344 1.98653 5.30336L0.0882051 8.14765C0.0324279 8.23194 0.00260836 8.33074 0.00244141 8.43182L0.00244141 11.504C0.00244141 11.7755 0.110332 12.036 0.302377 12.2281C0.494423 12.4201 0.754893 12.528 1.02649 12.528H2.11453C2.22733 12.9685 2.48355 13.359 2.84279 13.6379C3.20203 13.9167 3.64386 14.0681 4.09862 14.0681C4.55338 14.0681 4.99521 13.9167 5.35445 13.6379C5.71369 13.359 5.96991 12.9685 6.08271 12.528H10.3069C10.4197 12.9685 10.6759 13.359 11.0351 13.6379C11.3944 13.9167 11.8362 14.0681 12.291 14.0681C12.7457 14.0681 13.1876 13.9167 13.5468 13.6379C13.906 13.359 14.1623 12.9685 14.2751 12.528H15.3631C15.6347 12.528 15.8952 12.4201 16.0872 12.2281C16.2793 12.036 16.3872 11.7755 16.3872 11.504V8.94384C16.3872 8.67225 16.2793 8.41178 16.0872 8.21973C15.8952 8.02769 15.6347 7.9198 15.3631 7.9198ZM2.83648 5.87171H10.031L12.0791 7.9198H1.47451L2.83648 5.87171ZM4.09862 13.04C3.89608 13.04 3.69809 12.98 3.52969 12.8674C3.36129 12.7549 3.23003 12.595 3.15253 12.4079C3.07502 12.2207 3.05474 12.0148 3.09425 11.8162C3.13376 11.6175 3.2313 11.4351 3.37451 11.2919C3.51773 11.1487 3.70019 11.0511 3.89884 11.0116C4.09748 10.9721 4.30338 10.9924 4.4905 11.0699C4.67762 11.1474 4.83756 11.2786 4.95008 11.447C5.06261 11.6154 5.12266 11.8134 5.12266 12.016C5.12266 12.2876 5.01477 12.548 4.82273 12.7401C4.63068 12.9321 4.37021 13.04 4.09862 13.04ZM12.291 13.04C12.0884 13.04 11.8905 12.98 11.722 12.8674C11.5536 12.7549 11.4224 12.595 11.3449 12.4079C11.2674 12.2207 11.2471 12.0148 11.2866 11.8162C11.3261 11.6175 11.4237 11.4351 11.5669 11.2919C11.7101 11.1487 11.8926 11.0511 12.0912 11.0116C12.2898 10.9721 12.4957 10.9924 12.6829 11.0699C12.87 11.1474 13.0299 11.2786 13.1424 11.447C13.255 11.6154 13.315 11.8134 13.315 12.016C13.315 12.2876 13.2071 12.548 13.0151 12.7401C12.823 12.9321 12.5626 13.04 12.291 13.04ZM15.3631 11.504H14.2751C14.1623 11.0634 13.906 10.6729 13.5468 10.3941C13.1876 10.1152 12.7457 9.96387 12.291 9.96387C11.8362 9.96387 11.3944 10.1152 11.0351 10.3941C10.6759 10.6729 10.4197 11.0634 10.3069 11.504H6.08271C5.96991 11.0634 5.71369 10.6729 5.35445 10.3941C4.99521 10.1152 4.55338 9.96387 4.09862 9.96387C3.64386 9.96387 3.20203 10.1152 2.84279 10.3941C2.48355 10.6729 2.22733 11.0634 2.11453 11.504H1.02649V8.94384H15.3631V11.504Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_0_212">
+                                                <rect width="16.3847" height="16.3847" fill="white"
+                                                    transform="translate(0.00146484 0.751465)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <span> car rental </span>
+                            </div>
+                            <div class="link">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path
+                                            d="M14.2026 8.9487L16.3067 6.96875L16.319 6.95648C16.7524 6.52309 16.9959 5.9353 16.9959 5.3224C16.9959 4.70951 16.7524 4.12171 16.319 3.68833C15.8856 3.25495 15.2978 3.01147 14.6849 3.01147C14.072 3.01147 13.4843 3.25495 13.0509 3.68833C13.0509 3.69266 13.0429 3.69627 13.0386 3.70061L11.0586 5.80475L5.06535 3.62406C4.96206 3.58649 4.85019 3.57917 4.74288 3.60296C4.63556 3.62675 4.53727 3.68067 4.45953 3.75837L2.72653 5.49137C2.66614 5.55181 2.61991 5.62489 2.59117 5.70534C2.56242 5.7858 2.55189 5.87163 2.56031 5.95665C2.56874 6.04167 2.59592 6.12376 2.63989 6.19701C2.68387 6.27026 2.74355 6.33285 2.81462 6.38025L7.42801 9.45561L6.35788 10.5221H4.86389C4.71089 10.5222 4.56417 10.583 4.45592 10.6911L2.72292 12.4241C2.65533 12.4915 2.60551 12.5746 2.5779 12.666C2.5503 12.7574 2.54577 12.8542 2.56473 12.9478C2.58368 13.0413 2.62553 13.1287 2.68653 13.2022C2.74753 13.2756 2.82577 13.3328 2.91427 13.3686L5.57298 14.4322L6.63444 17.0859L6.63877 17.0974C6.67549 17.1863 6.73383 17.2646 6.80848 17.3252C6.88313 17.3859 6.97174 17.4269 7.06627 17.4446C7.16079 17.4623 7.25825 17.4562 7.34979 17.4267C7.44133 17.3972 7.52406 17.3453 7.59048 17.2758L9.31409 15.5514C9.36802 15.498 9.4109 15.4345 9.44026 15.3645C9.46962 15.2945 9.4849 15.2194 9.48522 15.1435V13.6495L10.551 12.5837L13.6264 17.1971C13.6738 17.2681 13.7364 17.3278 13.8096 17.3718C13.8829 17.4158 13.965 17.4429 14.05 17.4514C14.135 17.4598 14.2208 17.4493 14.3013 17.4205C14.3817 17.3918 14.4548 17.3455 14.5153 17.2851L16.2483 15.5522C16.326 15.4744 16.3799 15.3761 16.4037 15.2688C16.4274 15.1615 16.4201 15.0496 16.3826 14.9463L14.2026 8.9487ZM14.1975 15.9695L11.1222 11.3568C11.075 11.2852 11.0125 11.225 10.9392 11.1805C10.8659 11.1361 10.7836 11.1085 10.6983 11.0998C10.6788 11.0998 10.6601 11.0998 10.6413 11.0998C10.5653 11.0998 10.4902 11.1148 10.42 11.1439C10.3499 11.1731 10.2862 11.2157 10.2326 11.2695L8.49958 13.0025C8.39119 13.1106 8.33015 13.2573 8.32989 13.4105V14.9044L7.38613 15.8482L6.55573 13.7715C6.52668 13.6994 6.48337 13.6339 6.42841 13.5789C6.37344 13.524 6.30795 13.4807 6.23585 13.4516L4.16058 12.6212L5.10362 11.6775H6.59689C6.67277 11.6775 6.74792 11.6626 6.81805 11.6336C6.88818 11.6046 6.9519 11.5621 7.00559 11.5085L8.73859 9.77549C8.79911 9.71505 8.84545 9.64192 8.87427 9.56139C8.90309 9.48086 8.91367 9.39494 8.90524 9.30982C8.89681 9.2247 8.86959 9.14252 8.82553 9.06921C8.78148 8.99589 8.72169 8.93328 8.6505 8.88588L4.03783 5.80981L5.01264 4.83572L11.0218 7.02074C11.1277 7.05965 11.2426 7.0667 11.3525 7.04104C11.4623 7.01537 11.5622 6.95812 11.6399 6.87633L13.874 4.49995C14.0918 4.28856 14.384 4.17134 14.6875 4.17362C14.991 4.17591 15.2813 4.29751 15.4959 4.51216C15.7105 4.72681 15.8319 5.01726 15.8341 5.32074C15.8362 5.62422 15.7189 5.91636 15.5074 6.13402L13.1339 8.36743C13.0521 8.4451 12.9949 8.54503 12.9692 8.65487C12.9435 8.7647 12.9506 8.87965 12.9895 8.98553L15.1745 14.9947L14.1975 15.9695Z"
+                                            fill="black" />
+                                    </svg>
+                                </div>
+                                <span> flight </span>
+                            </div>
+                        </div>
+                    </div>
+                    <i @click="modal1 = false" class="fa-solid fa-xmark close"></i>
+                </div>
+            </div>
+            <div class="modal-mobile" :class="{'active': modal2}">
+                <div @click="modal2 = false" class="overlay"></div>
+                <div class="main">
 
+                    <div class="body">
+                        <div class="links-profile">
+                            <div class="link">
+                                <div class="icon">
+                                    <i class="fa-solid fa-money-bill-transfer"></i>
+                                    <span> Currency </span>
+                                </div>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                            <div class="link">
+                                <div @click="nested1 = true" class="icon">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span> about us </span>
+                                </div>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                            <div class="nested-modal" :class="{'active':nested1}"> 
+                             <div class="head">
+                             <div class="d-flex align-items-center gap-5">
+                                <i @click="nested1 = false" class="fa-solid fa-chevron-left"></i>
+                                 <h6> about </h6>
+                             </div>
+                             </div>
+                             <div class="mainn">
+                             <p> 
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                             About Rayna Tours and Travels: All Your Travel Needs Under One Roof
+                              </p>
+                             </div>
+                            </div>
+                            <div class="link">
+                                <div class="icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span> contact us </span>
+                                </div>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                            <div class="link">
+                                <div class="icon">
+                                    <i class="fa-regular fa-newspaper"></i>
+                                    <span> privacy policy </span>
+                                </div>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                            <div class="link">
+                                <div class="icon">
+                                    <i class="fa-solid fa-headphones-simple"></i>
+                                    <span> Helpline Number </span>
+                                </div>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                            <div class="link">
+                                <div class="icon">
+                                    <i class="fa-solid fa-language"></i>
+                                    <span> languages </span>
+                                </div>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                class="login d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path
+                                        d="M2.66699 13.9999V13.3333C2.66699 11.1241 4.45785 9.33325 6.66699 9.33325H9.33366C11.5428 9.33325 13.3337 11.1241 13.3337 13.3333V13.9999"
+                                        stroke="black" stroke-width="1.93453" stroke-linecap="round" />
+                                    <path
+                                        d="M8.00016 7.33321C6.5274 7.33321 5.3335 6.1393 5.3335 4.66654C5.3335 3.19378 6.5274 1.99988 8.00016 1.99988C9.4729 1.99988 10.6668 3.19378 10.6668 4.66654C10.6668 6.1393 9.4729 7.33321 8.00016 7.33321Z"
+                                        stroke="black" stroke-width="1.93453" stroke-linecap="round" />
+                                </svg>
+
+                                <span class="nav-span"> Log In </span>
+
+
+                            </button>
+
+                        </div>
+                    </div>
+                    <i @click="modal2 = false" class="fa-solid fa-xmark close"></i>
+                </div>
+            </div>
+        </div>
         <footer class="footer-container">
             <div class="container">
                 <div class="main">
@@ -464,6 +579,11 @@ const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
 
 let loginBtn1 = ref(1);
+
+let modal1 = ref(false);
+let modal2 = ref(false);
+let nested1 = ref(false);
+let modal4 = ref(false);
 
 onMounted(() => {
     const html = document.querySelector('html');
